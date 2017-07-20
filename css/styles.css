@@ -1,0 +1,31 @@
+html {
+    
+font-family: 'Lato';
+}
+
+
+nav ul li a{
+  color: white;
+}  
+
+.img-logo-vertical {
+	position: relative;
+	top: 50%;
+	transform:translateY(10%);
+}
+
+.panel {
+	position: relative;
+    /*padding-top: 100px;*/
+	/*overflow-x: hidden;*/
+}
+
+.home {
+	background: #e0e0e0;
+	text-align:center;
+}
+
+.inner {
+	width:960px;
+	margin:0 auto;
+}

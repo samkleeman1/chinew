@@ -1,0 +1,80 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+        <title>Cambridge Health Innovation</title>
+        <meta name="description" content=>
+        <meta name="keywords" content="Medicine, Health, NHS, IT, Computing, Consultancy, Consultant">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300"/>
+        <link rel="stylesheet" href="/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="css/styles.css"  media="screen,projection"/>
+    </head>
+
+    <body>
+     
+
+  
+
+        
+<div class="section no-pad-top no-pad-bot panel home" data-section-name="home">
+    <nav class="blue darken-4" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo center"><img class="img-logo-vertical" id="logo" src="img/logow.png" width=60px/></a>
+        
+    </div>
+  </nav>
+    <div class="container inner">
+        <h1 class="header center s10 black-text element"></h1><br>
+        <h5 class="header light black-text center">Healthcare technologies have been fragmented for too long - different systems, different passwords, creating barriers and slowing down healthcare. </h5><br>
+        </div>
+</div>
+
+<div class="section no-pad-bot panel pink lighten-4" data-section-name="about">
+    <div class="container">
+        
+        <h5 class="header light black-text center">We dare to imagine a future where technology accelerates our health service, is seamless, improves patients outcomes and maximises time caring for patients.</h5><br>
+        <h5 class="header light black-text center">We treat patients based on high-quality evidence so why should we not design technology based around pragmatic outcomes measures.</h5><br>
+        </div>
+</div>
+        
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/typed.min.js"></script>
+<script src="/js/jquery.scrollify.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script type="text/javascript">
+      $(function(){
+        /*
+        Pick randomly from subtitles
+        */
+        var typed = new Typed(".element", {
+        strings: ['Evidence-based medicine', 'Evidence-based technology'],
+        typeSpeed: 40,
+        showCursor: false,
+        backSpeed: 40,
+        backDelay: 40,
+        startDelay: 0,
+        smartBackspace: true, // this is a default
+        loop: false
+        });
+    
+      
+    $.scrollify({
+		section : ".panel",
+		sectionName : "section-name",
+		interstitialSection : "",
+		easing: "easeOutExpo",
+		scrollSpeed: 1100,
+		offset : 0,
+		scrollbars: false,
+		standardScrollElements: "",
+		setHeights: true,
+		overflowScroll: true,
+		updateHash: true,
+		touchScroll:true,
+	       });
+          });
+</script>
+      </body>
+</html>
