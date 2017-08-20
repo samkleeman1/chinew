@@ -15,17 +15,68 @@ nav ul li a{
 }
 
 .panel {
-	position: relative;
-    /*padding-top: 100px;*/
-	/*overflow-x: hidden;*/
+
+
 }
 
 .home {
 	background: #e0e0e0;
-	text-align:center;
+	
 }
 
 .inner {
-	width:960px;
-	margin:0 auto;
+display: flex;
+  align-items: center;
+  justify-content: center;
+    text-align:center;
+}
+
+.item {
+  max-width: 50%;
+}
+
+.floater {
+    
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index:20;
+        background-color: black;
+    padding:10px;
+    border-radius: 50%;
+}
+
+.scroll {
+	position:relative;
+	font-size:1.3em;
+	margin-top:20px;
+	display:inline-block;
+	height:100px;
+}
+.scroll:hover {
+	text-decoration:none;
+}
+
+.scroll:after {
+	content:'';
+	width:40px;
+	height:40px;
+	position:absolute;
+
+	margin:auto;
+	top:10px;
+	right:0;
+
+	left:0;
+	-webkit-animation:3s arrow infinite ease;
+	animation:3s arrow infinite ease;
+}
+
+.scroll:after {
+	border-right:2px solid #000;
+	border-bottom:2px solid #000;
+	-ms-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+
 }

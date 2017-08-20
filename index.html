@@ -11,29 +11,33 @@
     </head>
 
     <body>
-     
+     <link href="/css/font-awesome.min.css" rel="stylesheet">
+<div class="floater">
+    <a href="#" class="homey"><img class="center" id="logo" src="img/logow.png" width=50px/></a></div>
 
-  
-
+ 
         
-<div class="section no-pad-top no-pad-bot panel home" data-section-name="home">
-    <nav class="blue darken-4" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo center"><img class="img-logo-vertical" id="logo" src="img/logow.png" width=60px/></a>
+<div class="section no-pad-top no-pad-bot panel home inner panel" data-section-name="home">
+    <div class="container">
         
-    </div>
-  </nav>
-    <div class="container inner">
         <h1 class="header center s10 black-text element"></h1><br>
-        <h5 class="header light black-text center">Healthcare technologies have been fragmented for too long - different systems, different passwords, creating barriers and slowing down healthcare. </h5><br>
+        <h4 class="header light black-text center">Healthcare technologies have been fragmented for too long - different systems, different passwords, creating barriers and slowing down healthcare. </h4><br>
+        <a href="#about" class="scroll"></a>
         </div>
 </div>
 
-<div class="section no-pad-bot panel pink lighten-4" data-section-name="about">
+<div class="section no-pad-bot panel blue lighten-4 inner panel" data-section-name="about">
     <div class="container">
         
-        <h5 class="header light black-text center">We dare to imagine a future where technology accelerates our health service, is seamless, improves patients outcomes and maximises time caring for patients.</h5><br>
-        <h5 class="header light black-text center">We treat patients based on high-quality evidence so why should we not design technology based around pragmatic outcomes measures.</h5><br>
+        <h4 class="header light black-text center">We dare to imagine a future where technology accelerates our health service, is seamless, improves patients outcomes and maximises time caring for patients.</h4><br>
+        <h4 class="header light black-text center">We treat patients based on high-quality evidence so why should we not design technology based around pragmatic outcomes measures.</h4><br>
+        </div>
+</div>
+        
+<div class="section no-pad-bot panel pink lighten-4 inner panel" data-section-name="who">
+    <div class="container">
+        <h1 class="header light black-text center">We are Cambridge Health Innovation.</h1><br>
+        <img class="center" id="logo" src="img/logo.png" width=200px/>
         </div>
 </div>
         
@@ -62,7 +66,7 @@
       
     $.scrollify({
 		section : ".panel",
-		sectionName : "section-name",
+		//sectionName : "section-name",
 		interstitialSection : "",
 		easing: "easeOutExpo",
 		scrollSpeed: 1100,
@@ -75,6 +79,21 @@
 		touchScroll:true,
 	       });
           });
+    
+    $(".scroll,.scroll-btn").click(function(e) {
+		e.preventDefault();
+
+		$.scrollify.next();
+
+	});
+    $(".homey").click(function(e) {
+		e.preventDefault();
+        $.scrollify.move("#home");
+
+	});
+    
+    
+
 </script>
       </body>
 </html>
