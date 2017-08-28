@@ -93,16 +93,16 @@
 		setHeights: true,
 		overflowScroll: true,
 		updateHash: false,
-		touchScroll:true,
+		touchScroll:false,
 	       });
           });
     
-   // $(".scroll,.scroll-btn").click(function(e) {
-	//	e.preventDefault();
+    $(".scroll,.scroll-btn").click(function(e) {
+		e.preventDefault();
 
-	//	$.scrollify.next();
-//
-//	});
+		$.scrollify.move(1);
+
+	});
     $(".homey").click(function(e) {
 		e.preventDefault();
         $.scrollify.move("#home");
