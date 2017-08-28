@@ -8,10 +8,18 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300, 700"/>
         <link rel="stylesheet" href="css/materialize.min.css">
         <link type="text/css" rel="stylesheet" href="css/styles.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.min.css" />
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="js/jquery.min.js"></script>
+		<script src="js/typed.min.js"></script>
+		<script src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
     </head>
 
     <body>
-     <link href="css/font-awesome.min.css" rel="stylesheet">
+<div id="fullpage">
 <div class="floater hide-on-small-only">
     <a href="#" class="homey"><img class="center" id="logo" src="img/logow.png" width=50px/></a></div>
 
@@ -31,7 +39,6 @@
 
 <div class="section no-pad-bot panel blue lighten-4 inner panel" data-section-name="about">
     <div class="container">
-        
         <h4 class="header light black-text center">We dare to imagine a future where technology accelerates our health service, is seamless, improves patients outcomes and maximises time caring for patients.</h4><br>
         <h4 class="header light black-text center">We treat patients based on high-quality evidence so why should we not design technology based around pragmatic outcomes measures?</h4><br>
         </div>
@@ -45,11 +52,11 @@
 
         <div class="row">
         <div class="col s12 m4 offset-m1">
-        <img class="center" id="logo" src="img/sam.jpg" width=250px/>
+        <img class="center" id="logo" src="img/sam.jpg" width=90%/>
         <p><b>Sam</b> is final year medical student in Oxford interested in big data, bioinformatics and saving clinicians time</p>
         </div>
         <div class="col s12 m4 offset-m2">
-         <img class="center" id="logo" src="img/andrew.jpg" width=250px/>
+         <img class="center" id="logo" src="img/andrew.jpg" width=90%/>
          <p><b>Andrew</b> is a final year medical student in Cambridge interested in machine learning and artificial intelligence</p>
         </div>
         </div>
@@ -57,18 +64,19 @@
      
         </div>
 </div>
- 
+</div>
 
 
-<script src="js/jquery.min.js"></script>
-<script src="js/typed.min.js"></script>
-<script src="js/jquery.scrollify.min.js"></script>
-<script src="js/materialize.min.js"></script>
 <script type="text/javascript">
       $(function(){
         /*
         Pick randomly from subtitles
         */
+
+        $('#fullpage').fullpage({verticalCentered: true, scrollOverflow: true,
+		scrollOverflowReset: false,
+		scrollOverflowOptions: null, lockAnchors:true});
+
         var typed = new Typed(".element", {
         strings: ['Evidence-based medicine', 'Evidence-based technology'],
         typeSpeed: 40,
@@ -79,37 +87,14 @@
         smartBackspace: true, // this is a default
         loop: false
         });
-    
-      
-    $.scrollify({
-		section : ".panel",
-		//sectionName : "section-name",
-		interstitialSection : "",
-		easing: "easeOutExpo",
-		scrollSpeed: 1100,
-		offset : 0,
-		scrollbars: true,
-		standardScrollElements: "",
-		setHeights: true,
-		overflowScroll: true,
-		updateHash: true,
-		touchScroll:false,
-	       });
-          });
-    
-    $(".scroll,.scroll-btn").click(function(e) {
-		e.preventDefault();
 
-		$.scrollify.next();
 
-	});
-    $(".homey").click(function(e) {
-		e.preventDefault();
-        $.scrollify.move("#home");
+         $(".scroll,.scroll-btn").click(function(e) {
+			e.preventDefault();
+			$.fn.fullpage.moveSectionDown();
+		});
 
-	});
-    
-    
+    });
 
 </script>
       </body>
