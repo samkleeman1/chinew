@@ -74,7 +74,8 @@
         Pick randomly from subtitles
         */
 
-        $('#fullpage').fullpage({
+        $('#fullpage').fullpage({ 
+        onLeave: function(index, nextIndex, direction){$('.scrolldiv').slimScroll({ scrollTo : '0px' })},
 		scrollOverflowReset: false,
 		scrollOverflowOptions: null, lockAnchors:true});
 
@@ -96,8 +97,11 @@
 		});
 
          $('.scrolldiv').slimScroll({
-             height: '550px'
+             height: '600px'
           });
+
+
+
  
     });
 
