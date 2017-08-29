@@ -20,15 +20,16 @@
     </head>
 
     <body>
-<div id="fullpage">
+
 <div class="floater hide-on-small-only">
-    <a href="#" class="homey"><img class="center" id="logo" src="img/logow.png" width=50px/></a></div>
+    <a href="#" class="homey" id="clicky"><img class="center" id="logo" src="img/logow.png" width=50px/></a></div>
 
-        <div class="floater2 hide-on-med-and-up">
-    <a href="#" class="homey"><img class="center" id="logo" src="img/logow.png" width=50px/></a></div>
-
- 
         
+
+ <div id="fullpage">
+     
+     <div class="floater hide-on-med-and-up">
+    <a href="#" class="homey"><img class="center" id="logo" src="img/logow.png" width=50px/></a></div>
 <div class="section no-pad-top no-pad-bot panel home inner panel" data-section-name="home">
     <div class="container">
         
@@ -38,18 +39,18 @@
         </div>
 </div>
 
-<div class="section no-pad-bot panel blue lighten-4 inner panel" data-section-name="about">
-    <div class="container">
+<div class="section no-pad-top no-pad-bot panel blue lighten-4 inner panel" data-section-name="about">
+   
+    <div class="container"><br><br>
         <h4 class="header light black-text center">We dare to imagine a future where technology accelerates our health service, is seamless, improves patients outcomes and maximises time caring for patients.</h4><br>
         <h4 class="header light black-text center">We treat patients based on high-quality evidence so why should we not design technology based around pragmatic outcomes measures?</h4><br>
         </div>
 </div>
         
-<div class="section no-pad-bot panel pink lighten-4 inner panel " data-section-name="who"  style="height:100% !important;">
-    <div class="container scrolldiv" style="height:100% !important;"> 
+<div class="section no-pad-top no-pad-bot panel pink lighten-4 inner panel " data-section-name="who">
+    <div class="container"> 
          <div class="row"><h2 class="header light black-text center">We are Cambridge Health Innovation.</h2></div>
-        <p>Email us at <b>
-            &#104;&#105;&#64;&#99;&#97;&#109;&#98;&#114;&#105;&#100;&#103;&#101;&#104;&#101;&#97;&#108;&#116;&#104;&#105;&#110;&#110;&#111;&#118;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;</b></p><br>
+        
 
         <div class="row">
         <div class="col s12 m4 offset-m1">
@@ -61,7 +62,8 @@
          <p><b>Andrew</b> is a final year medical student in Cambridge interested in machine learning and artificial intelligence</p>
         </div>
         </div>
-        
+        <div class="row"><div class="col s10 offset-s1 m6 offset-m3 cardy"><p>Email us at <b>
+            &#104;&#105;&#64;&#99;&#97;&#109;&#98;&#114;&#105;&#100;&#103;&#101;&#104;&#101;&#97;&#108;&#116;&#104;&#105;&#110;&#110;&#111;&#118;&#97;&#116;&#105;&#111;&#110;&#46;&#99;&#111;&#109;</b></p></div></div>
      
         </div>
 </div>
@@ -69,17 +71,16 @@
 
 
 <script type="text/javascript">
-      $(function(){
-        /*
-        Pick randomly from subtitles
-        */
+    
+    
+      $(document).ready(function() {
+       
 
         $('#fullpage').fullpage({ 
-        onLeave: function(index, nextIndex, direction){$('.scrolldiv').slimScroll({ scrollTo : '0px' })},
 		scrollOverflowReset: false,
 		scrollOverflowOptions: null, 
         lockAnchors:true,
-        normalScrollElements:'.scrolldiv'
+        normalScrollElements:'.scrolldiv', scrollOverflow: true, verticalCentered: true, css3: true
         });
 
         var typed = new Typed(".element", {
@@ -92,18 +93,19 @@
         smartBackspace: true, // this is a default
         loop: false
         });
+          
+         
+          $('.homey').on("click",function(){
+  $.fn.fullpage.moveTo(1);
+})
+          
+          
 
 
          $(".scroll,.scroll-btn").click(function(e) {
 			e.preventDefault();
 			$.fn.fullpage.moveSectionDown();
 		});
-
-         $('.scrolldiv').slimScroll({
-             height: '90%'
-          });
-
-
 
  
     });

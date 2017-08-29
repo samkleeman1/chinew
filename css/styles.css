@@ -26,8 +26,7 @@ nav ul li a{
 .cardy {
     
     border: 1px solid black;
-    padding: 5px;
-    background-color: #fafafa;
+    background-color: #e0e0e0;
 }
 
 .panel {
@@ -62,16 +61,6 @@ display: flex;
     border-radius: 50%;
 }
 
-.floater2 {
-    
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index:20;
-        background-color: black;
-    padding:10px;
-    border-radius: 50%;
-}
 
 .scroll {
 	position:relative;
@@ -108,6 +97,9 @@ display: flex;
 
 }
 
+p {
+    font-size:18px
+}
 
 @media only screen and (max-width: 600px) {
   h1 {
@@ -120,6 +112,6 @@ display: flex;
         font-size: 25px;
     }
     p {
-        font-size:20px;
+        font-size:18px;
     }
 }
