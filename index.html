@@ -77,7 +77,10 @@
         $('#fullpage').fullpage({ 
         onLeave: function(index, nextIndex, direction){$('.scrolldiv').slimScroll({ scrollTo : '0px' })},
 		scrollOverflowReset: false,
-		scrollOverflowOptions: null, lockAnchors:true});
+		scrollOverflowOptions: null, 
+        lockAnchors:true,
+        normalScrollElements:'.scrolldiv'
+        });
 
         var typed = new Typed(".element", {
         strings: ['Evidence-based medicine', 'Evidence-based technology'],
